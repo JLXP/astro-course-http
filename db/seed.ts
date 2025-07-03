@@ -1,3 +1,4 @@
+import { getCollection } from "astro:content";
 import { Clients, db } from "astro:db";
 
 // https://astro.build/db/seed
@@ -9,6 +10,12 @@ export default async function seed() {
     { id: 4, name: "Melissa", age: 25, isActive: false },
     { id: 5, name: "Emin", age: 15, isActive: true },
   ] as any);
+
+  const posts = await getCollection('blog');
+
+
+
+
 
   console.log("Seed executed");
 }
