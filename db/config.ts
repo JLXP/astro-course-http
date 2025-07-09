@@ -21,5 +21,6 @@ const Posts = defineTable({
 export default defineDb({
   tables: {
     Clients,
+    Posts
   },
 });
